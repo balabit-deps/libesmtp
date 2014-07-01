@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+#dummy rules file for tgz2builder
+
+clean:
+	echo "clean"
+
+.PHONY: clean

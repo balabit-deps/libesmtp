@@ -1,0 +1,42 @@
+#!/bin/sh -ex
+
+fips=${ENABLE_FIPS:-false}
+
+MAKE=${MAKE:-make}
+SHELL=${SHELL:-/bin/bash}
+
+if $fips; then
+    echo "FIPS is enabled!!!"
+    echo "SKIPPING libmongo-client"
+    exit 0
+fi
+
+cmd=$1
+shift
+
+case "$cmd" in
+  get-version)
+        head -1 debian/changelog | sed -e 's/.*(\([^)]*\)).*/\1/'
+    ;;
+  build-exclude-list|dist-exclude-list|prepare-dist)
+    ## These lists can be used to delegate build-time and dist-time exclude lists
+    ## For example (syslog-ng-agent):
+    ##
+    ##    echo "out obj *.aqt *.ncb *.suo *.vcproj.*.user"
+    ##
+    ;;
+  bootstrap)
+    sh autogen.sh
+    ;;
+  configure)
+    $SHELL ./configure SHELL=$SHELL $@
+    ;;
+  make)
+    $MAKE $@
+    ;;
+  *)
+    echo "Unknown command: $cmd"
+    exit 1
+    ;;
+esac
+exit 0
