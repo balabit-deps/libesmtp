@@ -1,3 +1,9 @@
+libesmtp (1.0.6.syslogng52.2) syslogng52; urgency=medium
+
+  *  Add libesmtp-config file to the tgz2 dev package
+
+ -- jviktor <jviktor@devel-57>  Thu, 03 Jul 2014 11:36:22 +0200
+
 libesmtp (1.0.6.syslogng52.1) syslogng52; urgency=low
 
   * First stable release of libesmtp
