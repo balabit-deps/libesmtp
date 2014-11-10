@@ -37,3 +37,6 @@ m4/pkg.m4
 /test-driver
 .deps
 /lib/cfg-grammar.h
+b
+smake/*.pyc
+smake.pyc
