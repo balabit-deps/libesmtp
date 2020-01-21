@@ -1,3 +1,9 @@
+libesmtp (1.0.6-1.syslogng53.2) syslogng53; urgency=low
+
+  * upgrade to openssl 1.1.1d
+
+ -- Laszlo Szemere <laszlo.szemere@oneidentity.com>  Tue, 21 Jan 2020 13:39:33 +0100
+
 libesmtp (1.0.6.syslogng53.2) syslogng53; urgency=low
 
   * release for syslog-ng-5.3.0alpha2
