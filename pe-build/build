@@ -1,0 +1,16 @@
+source="libesmtp"
+version=1.0.6-pe-1
+
+bootstrap() {
+  ./autogen.sh
+}
+
+build() {
+  cd "${build_dir}"
+  ${src_dir}/configure --prefix="${prefix}" --without-openssl --enable-isoc=no
+  make
+}
+
+install() {
+  make -C "${build_dir}" install DESTDIR=${dest_dir}
+}

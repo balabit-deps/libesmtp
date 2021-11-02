@@ -1,0 +1,2 @@
+opt/syslog-ng/lib/*.s[l,o]*
+opt/syslog-ng/lib/libesmtp.a
