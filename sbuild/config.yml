@@ -1,0 +1,8 @@
+name: libesmtp
+builder:
+  name: AutotoolsBuilder
+platforms:
+  - aix-6.1/powerpc
+  - windows-2012/amd64
+  - windows-2012/i386
+  - linux-glibc2.11/amd64
